@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DST Enterprises | Fire & Safety & Industrial Supplies</title>
+
+    <meta name="description" content="DST Enterprises supplies Fire & Safety Equipment, Industrial Safety Products, Hardware, Mechanical, Electrical and General Engineering Supplies.">
+
+    <style>
+        :root {
+            --red: #d4121c;
+            --dark: #3f4348;
+            --black: #22252a;
+            --light: #f5f5f5;
+            --border: #e5e5e5;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .nav-button {
+            background: var(--red);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .nav-button:hover {
+            background: #b80f18;
+            color: white;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(20,23,27,0.94), rgba(20,23,27,0.78), rgba(20,23,27,0.42)),
+                linear-gradient(135deg, #3f4348, #17191c);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            right: -180px;
+            bottom: -180px;
+            border: 90px solid rgba(212,18,28,0.18);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            color: white;
+        }
+
+        .eyebrow {
+            color: #ff5b62;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: #ff4b54;
+        }
+
+        .hero-text {
+            max-width: 650px;
+            color: #e7e7e7;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #b80f18;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.45);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        .hero-trust {
+            margin-top: 42px;
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            color: #d7d7d7;
+            font-size: 13px;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(30px, 4vw, 44px);
+            color: var(--black);
+            line-height: 1.15;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+
+        .section-text {
+            color: #666;
+            max-width: 720px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 430px;
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, rgba(63,67,72,0.95), rgba(212,18,28,0.55)),
+                #3f4348;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .about-image-content {
+            max-width: 350px;
+        }
+
+        .about-image strong {
+            display: block;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .about-image p {
+            color: #e6e6e6;
+        }
+
+        .about-list {
+            margin-top: 25px;
+            list-style: none;
+        }
+
+        .about-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: var(--red);
+            font-weight: 800;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           SOLUTIONS
+        ========================= */
+
+        .solutions {
+            background: var(--light);
+        }
+
+        .solutions-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .solutions-header .section-text {
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            transition: 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #d9a0a3;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background: #fff0f1;
+            color: var(--red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+            color: var(--black);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .card-link {
+            color: var(--red);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =========================
+           FIRE & SAFETY
+        ========================= */
+
+        .fire-section {
+            background: var(--dark);
+            color: white;
+        }
+
+        .fire-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .fire-visual {
+            min-height: 470px;
+            border-radius: 8px;
+            background:
+                linear-gradient(145deg, rgba(212,18,28,0.85), rgba(35,38,42,0.95));
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+        }
+
+        .fire-visual-text {
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .fire-section .section-title {
+            color: white;
+        }
+
+        .fire-section .section-text {
+            color: #d3d3d3;
+        }
+
+        .fire-products {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 28px 0;
+        }
+
+        .fire-product {
+            padding: 13px 15px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 5px;
+            color: #eeeeee;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .process-header .section-text {
+            margin: auto;
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .process-item {
+            text-align: center;
+            padding: 20px 12px;
+        }
+
+        .process-number {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: var(--red);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+        }
+
+        .process-item h3 {
+            color: var(--black);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .process-item p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* =========================
+           INDUSTRIES
+        ========================= */
+
+        .industries {
+            background: var(--light);
+        }
+
+        .industries-header {
+            margin-bottom: 40px;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .industry {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 7px;
+        }
+
+        .industry span {
+            display: block;
+            color: var(--red);
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .industry h3 {
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+
+        .industry p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* =========================
+           WHY DST
+        ========================= */
+
+        .why {
+            background: white;
+        }
+
+        .why-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .why-header .section-text {
+            margin: auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            padding: 28px 22px;
+            border-top: 3px solid var(--red);
+            background: #fafafa;
+        }
+
+        .why-item h3 {
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 80px 0;
+            background: var(--red);
+            color: white;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        .cta h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: #ffe1e3;
+            max-width: 650px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: var(--red);
+            white-space: nowrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #24272b;
+            color: white;
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 45px;
+        }
+
+        .footer-brand {
+            font-size: 23px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand span {
+            color: var(--red);
+        }
+
+        footer p,
+        footer a {
+            color: #bfc1c4;
+            font-size: 14px;
+        }
+
+        footer h4 {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid,
+            .fire-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .industry-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                min-height: 68px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .nav-button {
+                padding: 10px 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 590px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .cards,
+            .industry-grid,
+            .why-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .fire-products {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image,
+            .fire-visual {
+                min-height: 320px;
+            }
+
+            .cta {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            DST<span>ENTERPRISES</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#services">Services</a>
+            <a href="#industries">Industries</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-button">
+            SEND YOUR REQUIREMENT
+        </a>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                FIRE & SAFETY • INDUSTRIAL • ENGINEERING
+            </div>
+
+            <h1>
+                Your Reliable<br>
+                <span>Industrial Supply Partner</span>
+            </h1>
+
+            <p class="hero-text">
+                DST Enterprises supplies Fire & Safety Equipment,
+                Industrial Safety Products, Hardware, Mechanical,
+                Electrical and General Engineering Supplies.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    SEND YOUR REQUIREMENT
+                </a>
+
+                <a href="https://wa.me/919052960970" class="btn btn-outline">
+                    WHATSAPP US
+                </a>
+
+            </div>
+
+            <div class="hero-trust">
+                <span>✓ Quality Products</span>
+                <span>✓ Reliable Supply</span>
+                <span>✓ Responsive Service</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+        <div>
+
+            <div class="section-label">
+                About DST Enterprises
+            </div>
+
+            <h2 class="section-title">
+                Supporting Industry with Reliable Supply Solutions
+            </h2>
+
+            <p class="section-text">
+                DST Enterprises is an industrial supply company focused
+                on providing Fire & Safety Equipment, Industrial Safety
+                Products, Hardware, Mechanical, Electrical and General
+                Engineering Supplies.
+            </p>
+
+            <ul class="about-list">
+                <li>Requirement-based industrial supply</li>
+                <li>Wide range of industrial products</li>
+                <li>Competitive pricing</li>
+                <li>Responsive customer service</li>
+            </ul>
+
+        </div>
+
+        <div class="about-image">
+
+            <div class="about-image-content">
+
+                <strong>
+                    Fire • Safety • Industrial
+                </strong>
+
+                <p>
+                    Practical supply solutions for industries,
+                    contractors, maintenance teams and procurement
+                    departments.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOLUTIONS
+========================= -->
+
+<section class="solutions" id="solutions">
+
+    <div class="container">
+
+        <div class="solutions-header">
+
+            <div class="section-label">
+                Our Solutions
+            </div>
+
+            <h2 class="section-title">
+                Industrial Products & Supply Solutions
+            </h2>
+
+            <p class="section-text">
+                From workplace safety to everyday maintenance
+                requirements, we support a wide range of industrial
+                procurement needs.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <h3>Fire & Safety</h3>
+                <p>
+                    Fire extinguishers, firefighting equipment,
+                    hydrant accessories, safety equipment and
+                    detection systems.
+                </p>
+                <a href="#fire-safety" class="card-link">
+                    Explore →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🦺</div>
+                <h3>Industrial Safety</h3>
+                <p>
+                    PPE, respiratory protection, hand protection,
+                    fall protection, LOTO and safety signage.
+                </p>
+                <a href="#fire-safety" class="card-link">
+                    Explore →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Industrial Hardware</h3>
+                <p>
+                    Pipes, fittings, sheets, plates, shims,
+                    fasteners and general industrial hardware.
+                </p>
+                <a href="#industrial" class="card-link">
+                    Explore →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🔧</div>
+                <h3>Mechanical & Pneumatics</h3>
+                <p>
+                    Mechanical components, pneumatic products
+                    and engineering consumables.
+                </p>
+                <a href="#industrial" class="card-link">
+                    Explore →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Electrical</h3>
+                <p>
+                    Industrial electrical materials, accessories
+                    and maintenance requirements.
+                </p>
+                <a href="#industrial" class="card-link">
+                    Explore →
+                </a>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🏗️</div>
+                <h3>Material Handling</h3>
+                <p>
+                    Material handling equipment, lifting solutions
+                    and related industrial accessories.
+                </p>
+                <a href="#industrial" class="card-link">
+                    Explore →
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FIRE & SAFETY
+========================= -->
+
+<section class="fire-section" id="fire-safety">
+
+    <div class="container fire-grid">
+
+        <div class="fire-visual">
+
+            <div class="fire-visual-text">
+                FIRE & SAFETY SOLUTIONS
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="section-label">
+                Fire & Safety
+            </div>
+
+            <h2 class="section-title">
+                Protecting People, Property & Operations
+            </h2>
+
+            <p class="section-text">
+                Reliable fire protection and industrial safety products
+                for industrial, commercial and infrastructure
+                requirements.
+            </p>
+
+
+            <div class="fire-products">
+
+                <div class="fire-product">
+                    Fire Extinguishers
+                </div>
+
+                <div class="fire-product">
+                    Fire Fighting Equipment
+                </div>
+
+                <div class="fire-product">
+                    Hydrant Accessories
+                </div>
+
+                <div class="fire-product">
+                    Industrial Safety
+                </div>
+
+                <div class="fire-product">
+                    PPE
+                </div>
+
+                <div class="fire-product">
+                    Gas Detection
+                </div>
+
+                <div class="fire-product">
+                    Safety Signages
+                </div>
+
+                <div class="fire-product">
+                    Fire Safety Services
+                </div>
+
+            </div>
+
+            <a href="#contact" class="btn btn-primary">
+                REQUEST FIRE & SAFETY QUOTATION
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HOW WE WORK
+========================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="process-header">
+
+            <div class="section-label">
+                How We Work
+            </div>
+
+            <h2 class="section-title">
+                Simple. Transparent. Reliable.
+            </h2>
+
+            <p class="section-text">
+                Our requirement-driven approach keeps industrial
+                procurement simple and responsive.
+            </p>
+
+        </div>
+
+
+        <div class="process">
+
+            <div class="process-item">
+                <div class="process-number">01</div>
+                <h3>Share Your Requirement</h3>
+                <p>
+                    Send your product name, specification,
+                    quantity or photo.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <div class="process-number">02</div>
+                <h3>We Understand</h3>
+                <p>
+                    We review your requirement and application.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <div class="process-number">03</div>
+                <h3>We Source</h3>
+                <p>
+                    We identify suitable product options.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <div class="process-number">04</div>
+                <h3>Receive Your Quote</h3>
+                <p>
+                    We provide product details and pricing.
+                </p>
+            </div>
+
+            <div class="process-item">
+                <div class="process-number">05</div>
+                <h3>Supply & Delivery</h3>
+                <p>
+                    We coordinate the confirmed supply.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INDUSTRIAL SOLUTIONS
+========================= -->
+
+<section class="solutions" id="industrial">
+
+    <div class="container">
+
+        <div class="solutions-header">
+
+            <div class="section-label">
+                Industrial Supply
+            </div>
+
+            <h2 class="section-title">
+                Products for Everyday Industrial Requirements
+            </h2>
+
+            <p class="section-text">
+                Supporting maintenance, engineering, production
+                and project requirements.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Industrial Hardware</h3>
+                <p>
+                    MS, GI & SS pipes and fittings, sheets,
+                    aluminium sheets, shims, chequered plates,
+                    fasteners and general hardware.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Mechanical & Pneumatics</h3>
+                <p>
+                    Mechanical components, pneumatic products,
+                    engineering consumables and maintenance
+                    requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Electrical</h3>
+                <p>
+                    Industrial electrical materials, accessories,
+                    components and maintenance requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ladders & Access</h3>
+                <p>
+                    Aluminium ladders, FRP ladders, scaffoldings
+                    and access equipment.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Welding Equipment</h3>
+                <p>
+                    Welding equipment, accessories, consumables
+                    and related industrial products.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Material Handling & Lifting</h3>
+                <p>
+                    Material handling equipment, lifting solutions
+                    and associated accessories.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INDUSTRIES
+========================= -->
+
+<section class="industries" id="industries">
+
+    <div class="container">
+
+        <div class="industries-header">
+
+            <div class="section-label">
+                Industries We Serve
+            </div>
+
+            <h2 class="section-title">
+                Supporting Industrial Requirements
+            </h2>
+
+            <p class="section-text">
+                We support procurement, maintenance, engineering
+                and safety requirements across diverse industrial
+                environments.
+            </p>
+
+        </div>
+
+
+        <div class="industry-grid">
+
+            <div class="industry">
+                <span>🏭</span>
+                <h3>Manufacturing</h3>
+                <p>
+                    Industrial production and manufacturing
+                    requirements.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span>🧪</span>
+                <h3>Pharma & Chemical</h3>
+                <p>
+                    Safety, maintenance and engineering supplies.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span>🛢️</span>
+                <h3>Oil & Gas</h3>
+                <p>
+                    Industrial safety, hardware and engineering
+                    requirements.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span>⚡</span>
+                <h3>Power & Energy</h3>
+                <p>
+                    Electrical, safety and maintenance supplies.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span>🏗️</span>
+                <h3>Infrastructure</h3>
+                <p>
+                    Construction, project and industrial supplies.
+                </p>
+            </div>
+
+            <div class="industry">
+                <span>📦</span>
+                <h3>Warehousing & Logistics</h3>
+                <p>
+                    Safety, material handling and general supplies.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY DST
+========================= -->
+
+<section class="why">
+
+    <div class="container">
+
+        <div class="why-header">
+
+            <div class="section-label">
+                Why DST Enterprises
+            </div>
+
+            <h2 class="section-title">
+                One Reliable Supply Partner
+            </h2>
+
+            <p class="section-text">
+                Practical industrial supply solutions built around
+                customer requirements.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-item">
+                <h3>Reliable Supply</h3>
+                <p>
+                    Dependable products and responsive coordination
+                    for industrial requirements.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Wide Product Range</h3>
+                <p>
+                    Multiple industrial categories under one
+                    supply partner.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Competitive Pricing</h3>
+                <p>
+                    Practical commercial solutions based on your
+                    requirement.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <h3>Responsive Service</h3>
+                <p>
+                    Quick communication and requirement-focused
+                    support.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta" id="contact">
+
+    <div class="container cta-inner">
+
+        <div>
+
+            <h2>
+                Have an Industrial Requirement?
+            </h2>
+
+            <p>
+                Send us the product name, specification, quantity
+                or even a photo. We'll review your requirement
+                and provide a suitable supply option.
+            </p>
+
+        </div>
+
+        <a href="https://wa.me/919052960970" class="btn">
+            SEND REQUIREMENT ON WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-brand">
+                    DST<span>ENTERPRISES</span>
+                </div>
+
+                <p>
+                    Fire • Safety • Hardware • Mechanical •
+                    Electrical & Industrial Supplies
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Solutions</h4>
+
+                <ul class="footer-links">
+                    <li><a href="#fire-safety">Fire & Safety</a></li>
+                    <li><a href="#fire-safety">Industrial Safety</a></li>
+                    <li><a href="#industrial">Industrial Hardware</a></li>
+                    <li><a href="#industrial">Mechanical</a></li>
+                    <li><a href="#industrial">Electrical</a></li>
+                    <li><a href="#industrial">Material Handling</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Contact</h4>
+
+                <p>
+                    +91 90529 60970
+                </p>
+
+                <br>
+
+                <p>
+                    Visakhapatnam,<br>
+                    Andhra Pradesh, India
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DST Enterprises. All Rights Reserved.
+            </p>
+
+            <p>
+                Fire & Safety • Industrial Supply Solutions
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
