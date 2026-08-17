@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DST Enterprises | Fire & Safety & Industrial Supplies</title>
+<meta name="description" content="DST Enterprises — Fire & Safety, Industrial Safety, Hardware, Mechanical and Industrial Supplies.">
+<style>
+:root{--red:#d4121c;--dark:#3f4348;--text:#25282b;--muted:#6d7378;--light:#f5f6f6;--border:#e4e6e7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.55;background:#fff}
+a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
+.container{width:min(1080px,90%);margin:auto}
+header{height:76px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:20}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{height:52px;width:auto;object-fit:contain}
+nav{display:flex;align-items:center;gap:26px}nav a{font-size:12px;color:#555}nav a:hover{color:var(--red)}
+.nav-btn{background:var(--red);color:#fff!important;padding:10px 17px;font-weight:700;font-size:11px!important}
+.hero{padding:92px 0 100px}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.eyebrow,.section-label{color:var(--red);font-size:9px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:12px}
+h1{font-size:52px;line-height:1.04;letter-spacing:-2px;margin-bottom:22px;max-width:550px}
+.hero-copy{color:var(--muted);font-size:14px;max-width:530px;margin-bottom:27px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 19px;font-size:11px;font-weight:700;border:1px solid var(--red)}
+.btn-red{background:var(--red);color:#fff}.btn-outline{color:var(--red);background:#fff}
+.hero-visual{border:1px solid var(--border);background:var(--light);padding:28px;min-height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero-visual img{width:88%;max-height:290px;object-fit:contain}.hero-tag{margin-top:18px;font-size:9px;letter-spacing:1.5px;color:#7a7f83;text-transform:uppercase}
+.section{padding:88px 0}.section-light{background:var(--light)}
+.section-head{text-align:center;margin-bottom:45px}.section-head h2{font-size:30px;line-height:1.15;letter-spacing:-.7px}
+.section-head p{color:var(--muted);font-size:12px;max-width:620px;margin:12px auto 0}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--border);transition:.2s ease}.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.card-image{height:190px;background:#f1f2f2;padding:20px;display:flex;align-items:center;justify-content:center}
+.card-image img{width:100%;height:100%;object-fit:contain}.card-body{padding:20px}
+.card-kicker{font-size:8px;letter-spacing:1.5px;color:#999;text-transform:uppercase;margin-bottom:6px}
+.card h3{font-size:17px;margin-bottom:7px}.card p{font-size:11px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:start}
+.about h2{font-size:34px;line-height:1.12;margin-bottom:15px}.about p{font-size:13px;color:var(--muted);max-width:650px}
+.points{margin-top:25px;display:grid;gap:13px}.point{display:flex;gap:12px;font-size:12px}
+.point span{width:18px;height:18px;border-radius:50%;background:#fff0f0;color:var(--red);display:flex;align-items:center;justify-content:center;flex:none;font-size:10px;font-weight:bold}
+.download-box{border:1px solid var(--border);padding:26px;background:#fff}.download-box h3{font-size:19px;margin-bottom:7px}
+.download-box p{font-size:11px;color:var(--muted);margin-bottom:17px}
+.download{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);padding:15px;margin-top:8px;font-size:11px}
+.download strong{font-size:12px}.download small{display:block;color:#999;margin-top:2px}.download .arrow{color:var(--red);font-weight:bold}
+.industries{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border)}
+.industry{background:#fff;padding:25px;min-height:105px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.industry:nth-child(3n){border-right:0}.industry h3{font-size:13px;margin-bottom:5px}.industry p{font-size:10px;color:var(--muted)}
+.enquiry{text-align:center;padding:88px 0}.enquiry h2{font-size:31px;margin-bottom:10px}
+.enquiry>p{font-size:12px;color:var(--muted);max-width:620px;margin:0 auto 30px}
+.enquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left;max-width:760px;margin:auto}
+.enquiry-card{border:1px solid var(--border);padding:26px;background:#fff}.enquiry-card .small{color:var(--red);font-size:8px;letter-spacing:1.5px;font-weight:bold;text-transform:uppercase}
+.enquiry-card h3{font-size:18px;margin:7px 0}.enquiry-card p{font-size:11px;color:var(--muted);margin-bottom:17px}
+footer{background:#24272a;color:#fff;padding:42px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px}
+.footer-logo{height:48px;width:auto;margin-bottom:14px}footer p,footer a{font-size:10px;color:#aeb2b5}footer h4{font-size:11px;margin-bottom:13px}
+.footer-links{display:grid;gap:7px}.copyright{border-top:1px solid #3b3f42;margin-top:32px;padding-top:18px;font-size:9px;color:#8f9498}
+@media(max-width:800px){header,.nav{height:68px}.logo{height:45px}nav{gap:12px}nav a:not(.nav-btn){display:none}.hero{padding:60px 0}.hero-grid,.about-grid{grid-template-columns:1fr;gap:35px}h1{font-size:42px}.products{grid-template-columns:1fr 1fr}.industries{grid-template-columns:1fr 1fr}.industry:nth-child(3n){border-right:1px solid var(--border)}.industry:nth-child(2n){border-right:0}.enquiry-grid,.footer-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.container{width:90%}h1{font-size:38px}.products,.industries{grid-template-columns:1fr}.industry,.industry:nth-child(2n),.industry:nth-child(3n){border-right:0}.card-image{height:170px}.footer-grid{gap:28px}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a href="#top"><img class="logo" src="dst-logo.png.png" alt="DST Enterprises"></a>
+<nav><a href="#products">Products</a><a href="#industries">Industries</a><a href="#about">About</a><a href="#downloads">Downloads</a><a href="#contact">Contact</a><a class="nav-btn" href="mailto:dstenterprises@gmail.com?subject=Product%20Enquiry%20-%20DST%20Enterprises">Enquire Now</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="container hero-grid"><div>
+<div class="eyebrow">Fire • Safety • Industrial Supplies</div>
+<h1>Reliable products.<br>Professional supply.</h1>
+<p class="hero-copy">DST Enterprises supports industrial, commercial and infrastructure requirements with Fire &amp; Safety products and a focused range of industrial supplies.</p>
+<div class="actions"><a class="btn btn-red" href="mailto:dstenterprises@gmail.com?subject=Product%20Enquiry%20-%20DST%20Enterprises">Email Enquiry</a><a class="btn btn-outline" href="https://wa.me/?text=Hello%20DST%20Enterprises%2C%20I%20have%20a%20product%20enquiry." target="_blank">WhatsApp Enquiry</a></div>
+</div><div class="hero-visual"><img src="fire-extinguishers.svg" alt="Fire extinguisher range"><div class="hero-tag">Fire Safety • Industrial Supply</div></div>
+</div></section>
+
+<section class="section section-light" id="products"><div class="container">
+<div class="section-head"><div class="section-label">Product Range</div><h2>Product categories, kept simple.</h2><p>A focused range presented by category rather than individual product listings, keeping the website clear while allowing detailed requirements to be discussed through enquiry.</p></div>
+<div class="products">
+<article class="card"><div class="card-image"><img src="fire-extinguishers.svg" alt="Fire Extinguishers"></div><div class="card-body"><div class="card-kicker">Core Category</div><h3>Fire Extinguishers</h3><p>ABC, CO₂, Foam, Clean Agent, Kitchen and wheeled fire extinguisher solutions.</p></div></article>
+<article class="card"><div class="card-image"><img src="fire-safety.svg" alt="Fire and Safety Equipment"></div><div class="card-body"><div class="card-kicker">Safety Solutions</div><h3>Fire &amp; Safety Equipment</h3><p>Fire protection equipment, detection, emergency and safety-related requirements.</p></div></article>
+<article class="card"><div class="card-image"><img src="ppe.svg" alt="PPE and Industrial Safety"></div><div class="card-body"><div class="card-kicker">Industrial Safety</div><h3>PPE &amp; Industrial Safety</h3><p>Head-to-toe PPE, respiratory protection, fall protection, LOTO and road safety.</p></div></article>
+<article class="card"><div class="card-image"><img src="hardware.svg" alt="Industrial Hardware"></div><div class="card-body"><div class="card-kicker">Hardware</div><h3>Industrial Hardware</h3><p>Fasteners, hand tools, power tools, abrasives and maintenance hardware.</p></div></article>
+<article class="card"><div class="card-image"><img src="mechanical.svg" alt="Mechanical and Pneumatic"></div><div class="card-body"><div class="card-kicker">Mechanical</div><h3>Mechanical &amp; Pneumatic</h3><p>Bearings, valves, pipes, fittings, pneumatic products and engineering requirements.</p></div></article>
+<article class="card"><div class="card-image"><img src="industrial-supply.svg" alt="Industrial Supply"></div><div class="card-body"><div class="card-kicker">Industrial Supply</div><h3>Industrial Supply</h3><p>Welding equipment, ladders, scaffolding, material handling and specialty products.</p></div></article>
+</div></div></section>
+
+<section class="section" id="about"><div class="container about-grid">
+<div class="about"><div class="section-label">About DST Enterprises</div><h2>A dependable supply partner for industry.</h2><p>DST Enterprises supports industrial requirements with Fire &amp; Safety products, industrial safety solutions, hardware, mechanical products and general engineering supplies.</p>
+<div class="points">
+<div class="point"><span>✓</span><div><strong>Focused product coverage</strong><br><small>Products selected around practical industrial requirements.</small></div></div>
+<div class="point"><span>✓</span><div><strong>Quality-oriented product selection</strong><br><small>Requirements are considered against the specifications shared by customers.</small></div></div>
+<div class="point"><span>✓</span><div><strong>Clear business communication</strong><br><small>Professional enquiry and quotation communication for industrial requirements.</small></div></div>
+</div></div>
+<div class="download-box" id="downloads"><div class="section-label">Company Information</div><h3>Explore DST Enterprises</h3><p>Download our company profile and brochure for a broader overview of our capabilities and product range.</p>
+<a class="download" href="company-profile.pdf" target="_blank"><div><strong>Company Profile</strong><small>PDF document</small></div><span class="arrow">↓</span></a>
+<a class="download" href="product-brochure.pdf" target="_blank"><div><strong>Product Brochure</strong><small>PDF document</small></div><span class="arrow">↓</span></a>
+</div></div></section>
+
+<section class="section section-light" id="industries"><div class="container">
+<div class="section-head"><div class="section-label">Industries We Serve</div><h2>Supporting industrial environments.</h2><p>Our product coverage is suited to routine procurement, maintenance, safety and project-related requirements.</p></div>
+<div class="industries">
+<div class="industry"><h3>Manufacturing</h3><p>Production, maintenance and workplace safety requirements.</p></div>
+<div class="industry"><h3>Pharma &amp; Chemical</h3><p>Safety and engineering supply requirements.</p></div>
+<div class="industry"><h3>Oil &amp; Gas</h3><p>Industrial safety and maintenance support.</p></div>
+<div class="industry"><h3>Power &amp; Energy</h3><p>Safety, electrical and engineering supplies.</p></div>
+<div class="industry"><h3>Infrastructure</h3><p>Construction and project-related supplies.</p></div>
+<div class="industry"><h3>Warehousing &amp; Logistics</h3><p>Material handling and workplace safety supplies.</p></div>
+</div></div></section>
+
+<section class="enquiry" id="contact"><div class="container"><div class="section-label">Enquiries</div><h2>Let's discuss your requirement.</h2><p>Email is the preferred channel for detailed and professional requirements. WhatsApp is available when you need a quick response.</p>
+<div class="enquiry-grid">
+<div class="enquiry-card"><div class="small">Preferred</div><h3>Email Enquiry</h3><p>Best for RFQs, specifications, quantities, drawings, company requirements and formal business communication.</p><a class="btn btn-red" href="mailto:dstenterprises@gmail.com?subject=Product%20Enquiry%20-%20DST%20Enterprises">Send Enquiry by Email</a></div>
+<div class="enquiry-card"><div class="small">Quick Communication</div><h3>WhatsApp Enquiry</h3><p>Useful for quick product enquiries, photos, specifications and initial communication.</p><a class="btn btn-outline" href="https://wa.me/?text=Hello%20DST%20Enterprises%2C%20I%20have%20a%20product%20enquiry." target="_blank">Message on WhatsApp</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="container"><div class="footer-grid">
+<div><img class="footer-logo" src="dst-logo.png.png" alt="DST Enterprises"><p>Fire • Safety • Hardware • Mechanical • Electrical and Industrial Supplies.</p></div>
+<div><h4>Quick Links</h4><div class="footer-links"><a href="#products">Products</a><a href="#industries">Industries</a><a href="#about">About</a><a href="#downloads">Downloads</a></div></div>
+<div><h4>Enquiries</h4><div class="footer-links"><a href="mailto:dstenterprises@gmail.com">Email</a><a href="https://wa.me/?text=Hello%20DST%20Enterprises%2C%20I%20have%20a%20product%20enquiry." target="_blank">WhatsApp</a></div></div>
+</div><div class="copyright">© 2026 DST Enterprises. All rights reserved.</div></div></footer>
+</body>
+</html>
