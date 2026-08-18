@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DST Enterprises — Protecting &amp; Powering Industries</title>
+<meta name="description" content="DST Enterprises, Visakhapatnam — Fire &amp; Safety, Industrial Hardware, Mechanical, Electrical and Engineering Supply Solutions.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --ink: #1e2125;
+    --muted: #6c757d;
+    --red: #d32f2f;
+    --red-dark: #b71c1c;
+    --dark: #212529;
+    --dark-2: #2b3035;
+    --line: #e9ecef;
+    --line-strong: #dee2e6;
+    --radius: 12px;
+    --disp: 'Poppins', sans-serif;
+    --body: 'Inter', sans-serif;
+    --shadow: 0 10px 30px rgba(0,0,0,0.06);
+    --shadow-hover: 0 15px 35px rgba(0,0,0,0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  button { font-family: inherit; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  
+  h1, h2, h3, h4, h5 { font-family: var(--disp); font-weight: 700; line-height: 1.2; color: var(--ink); }
+  
+  .eyebrow {
+    font-family: var(--disp); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--red);
+    text-transform: uppercase; margin-bottom: 8px; display: inline-block;
+  }
+  
+  .heading-rule { display: block; width: 48px; height: 3px; background: var(--red); margin: 12px 0 20px; border-radius: 2px; }
+  .heading-rule.center { margin: 12px auto 20px; }
+
+  p.lead { color: var(--muted); font-size: 15px; max-width: 580px; }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--disp); font-size: 13.5px; font-weight: 600;
+    padding: 12px 22px; border-radius: 6px; border: 1px solid transparent; cursor: pointer; transition: all .2s ease;
+  }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(211,47,47,0.25); }
+  .btn-outline { border-color: var(--line-strong); color: var(--ink); background: #fff; }
+  .btn-outline:hover { border-color: var(--red); color: var(--red); transform: translateY(-1px); }
+  .btn-outline-light { border-color: rgba(255,255,255,0.4); color: #fff; background: transparent; }
+  .btn-outline-light:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+  .btn-sm { padding: 9px 16px; font-size: 13px; }
+
+  /* ===== HEADER ===== */
+  header.site-nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 20px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { height: 44px; width: auto; }
+  
+  nav.nav-links { display: flex; gap: 28px; }
+  nav.nav-links a { font-family: var(--disp); font-size: 14px; font-weight: 500; color: #495057; position: relative; padding: 4px 0; transition: color .2s; }
+  nav.nav-links a:hover { color: var(--red); }
+  nav.nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--red); transition: .2s; }
+  nav.nav-links a:hover::after { width: 100%; }
+
+  .nav-cta { display: flex; align-items: center; gap: 12px; }
+  .burger { display: none; width: 26px; height: 20px; flex-direction: column; justify-content: space-between; background: none; border: 0; cursor: pointer; }
+  .burger span { display: block; height: 2px; background: var(--ink); width: 100%; }
+  
+  .mobile-panel { position: fixed; inset: 0; background: #fff; z-index: 99; display: none; flex-direction: column; padding: 90px 28px 40px; gap: 22px; }
+  .mobile-panel.open { display: flex; }
+  .mobile-panel a { font-family: var(--disp); font-size: 20px; font-weight: 600; }
+  .mobile-panel .close-x { position: absolute; top: 24px; right: 28px; font-size: 32px; background: none; border: 0; cursor: pointer; }
+
+  /* ===== HERO SECTION ===== */
+  .hero { background: linear-gradient(135deg, #ffffff 0%, #f4f5f7 100%); padding: 60px 0 40px; overflow: hidden; position: relative; border-bottom: 1px solid var(--line); }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .hero h1 { font-size: clamp(32px, 3.8vw, 48px); font-weight: 800; margin: 12px 0; color: #111; letter-spacing: -0.02em; }
+  .hero h1 span { color: var(--red); }
+  .hero-sub { color: var(--muted); font-size: 15.5px; margin-bottom: 24px; max-width: 520px; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero-tags span { font-family: var(--disp); font-size: 12px; font-weight: 600; color: #495057; background: #fff; border: 1px solid var(--line-strong); padding: 5px 12px; border-radius: 20px; }
+  
+  .hero-photo { position: relative; display: flex; justify-content: center; }
+  .hero-photo img { max-height: 440px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1)); border-radius: var(--radius); }
+  .hero-photo .badge {
+    position: absolute; right: 10px; bottom: 10px; background: var(--dark); color: #fff; padding: 14px 18px;
+    border-radius: 8px; box-shadow: var(--shadow); max-width: 210px; border-left: 4px solid var(--red);
+  }
+  .hero-photo .badge strong { display: block; font-family: var(--disp); font-size: 20px; color: #fff; }
+  .hero-photo .badge span { font-size: 11.5px; color: #adb5bd; }
+
+  /* ===== HIGHLIGHTS STRIP ===== */
+  .highlights-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 24px 0; }
+  .highlights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .hl-item { display: flex; align-items: center; gap: 14px; }
+  .hl-icon { width: 44px; height: 44px; border-radius: 50%; background: #fde8e8; color: var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .hl-text h4 { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+  .hl-text p { font-size: 12px; color: var(--muted); }
+
+  /* ===== CONTACT STRIP ===== */
+  .contact-strip { background: var(--dark); color: #fff; font-size: 13.5px; }
+  .contact-strip .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 14px 24px; }
+  .contact-strip .item { display: flex; align-items: center; gap: 10px; }
+  .contact-strip .item .ic { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); color: var(--red); display: flex; align-items: center; justify-content: center; flex: none; }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 80px 0; }
+  .surface { background: #fff; }
+  .section-head { max-width: 680px; margin: 0 auto 48px; text-align: center; }
+  .section-head.left { margin: 0 0 40px; text-align: left; }
+  .section-head h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 700; margin-top: 4px; }
+
+  /* ===== OVERVIEW GRID ===== */
+  .overview-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 24px; margin-top: 40px; }
+  .overview-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+  .overview-card.accent { background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%); color: #fff; }
+  .overview-card.accent h2, .overview-card.accent h3 { color: #fff; }
+  .overview-card.accent p { color: #ced4da; }
+  
+  .ind-mini-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .ind-mini-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--ink); background: var(--bg); padding: 10px; border-radius: 6px; }
+
+  /* ===== CATEGORY CARDS GRID ===== */
+  .cat-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+  .cat-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; text-align: center; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+  .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--line-strong); }
+  .cat-card-img { height: 130px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .cat-card-img img { max-height: 100%; width: auto; object-fit: contain; }
+  .cat-card h3 { font-size: 16px; margin-bottom: 8px; }
+  .cat-card p { font-size: 12.5px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+
+  /* ===== ACCORDION CATALOG ===== */
+  .catalog { display: flex; flex-direction: column; gap: 12px; }
+  details.cat-item { background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+  details.cat-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 18px; padding: 18px 24px; }
+  details.cat-item summary::-webkit-details-marker { display: none; }
+  .cat-num { font-family: var(--disp); font-weight: 700; font-size: 13px; color: var(--red); background: #fde8e8; border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .cat-title { flex: 1; }
+  .cat-title h3 { font-size: 16px; margin-bottom: 2px; }
+  .cat-title span { font-size: 12.5px; color: var(--muted); font-weight: 400; font-family: var(--body); }
+  .cat-toggle { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line-strong); position: relative; }
+  .cat-toggle::before, .cat-toggle::after { content: ""; position: absolute; top: 50%; left: 50%; background: var(--ink); transition: .2s; }
+  .cat-toggle::before { width: 10px; height: 2px; transform: translate(-50%,-50%); }
+  .cat-toggle::after { width: 2px; height: 10px; transform: translate(-50%,-50%); }
+  details[open] .cat-toggle { background: var(--red); border-color: var(--red); }
+  details[open] .cat-toggle::before, details[open] .cat-toggle::after { background: #fff; }
+  details[open] .cat-toggle::after { opacity: 0; }
+  .cat-body { padding: 0 24px 24px 24px; border-top: 1px solid var(--line); background: #fafafa; }
+  .subgroup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding-top: 20px; }
+  .subgroup h5 { font-family: var(--disp); font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px; padding-bottom: 4px; border-bottom: 2px solid var(--red); display: inline-block; }
+  .subgroup ul li { font-size: 13px; color: #495057; padding: 3px 0 3px 12px; position: relative; }
+  .subgroup ul li::before { content: ""; position: absolute; left: 0; top: 10px; width: 4px; height: 4px; border-radius: 50%; background: var(--red); }
+
+  /* ===== SERVICES & VALUES GRIDS ===== */
+  .services-grid, .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .service-card, .value-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+  .icon-circle { width: 44px; height: 44px; border-radius: 50%; background: #fde8e8; color: var(--red); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; flex: none; }
+  .service-card h4, .value-card h4 { font-size: 15px; margin-bottom: 6px; }
+  .service-card p, .value-card p { font-size: 13px; color: var(--muted); }
+
+  /* ===== WHY DST ===== */
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .why-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 18px; box-shadow: var(--shadow); }
+  .why-card .icon-circle { width: 38px; height: 38px; margin-bottom: 12px; }
+  .why-card h4 { font-size: 14px; margin-bottom: 6px; }
+  .why-card p { font-size: 12px; color: var(--muted); }
+
+  /* ===== DOWNLOADS ===== */
+  .downloads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .doc-card { background: var(--dark); color: #fff; border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; position: relative; overflow: hidden; box-shadow: var(--shadow); }
+  .doc-card::before { content: ""; position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; border-radius: 50%; background: rgba(211,47,47,0.2); }
+  .doc-card .doc-ic { width: 48px; height: 48px; border-radius: 10px; background: var(--red); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .doc-card h4 { color: #fff; font-size: 18px; margin-bottom: 8px; }
+  .doc-card p { color: #adb5bd; font-size: 13px; margin-bottom: 20px; flex: 1; }
+
+  /* ===== CTA STRIP ===== */
+  .cta-strip { background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); color: #fff; text-align: center; }
+  .cta-strip h2 { color: #fff; font-size: clamp(22px, 3vw, 30px); margin-bottom: 12px; }
+  .cta-strip p { color: rgba(255,255,255,0.9); margin-bottom: 24px; }
+
+  /* ===== CONTACT ===== */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .contact-list { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; }
+  .contact-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 14px; }
+  .contact-list .ic { width: 34px; height: 34px; border-radius: 50%; background: #fde8e8; color: var(--red); display: flex; align-items: center; justify-content: center; flex: none; }
+  
+  form.inquiry { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 14px; }
+  form.inquiry .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  form.inquiry label { font-family: var(--disp); font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 4px; display: block; }
+  form.inquiry input, form.inquiry textarea {
+    width: 100%; background: #f8f9fa; border: 1px solid var(--line-strong); border-radius: 6px; color: var(--ink); padding: 10px 12px; font-family: var(--body); font-size: 13.5px;
+  }
+  form.inquiry input:focus, form.inquiry textarea:focus { outline: none; border-color: var(--red); background: #fff; }
+  form.inquiry textarea { resize: vertical; min-height: 90px; }
+
+  /* ===== FOOTER ===== */
+  footer { background: var(--dark); color: #adb5bd; padding-top: 50px; }
+  .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .footer-brand img { height: 40px; margin-bottom: 12px; }
+  .footer-brand p { font-size: 12.5px; color: #6c757d; max-width: 250px; }
+  footer h5 { color: #fff; font-family: var(--disp); font-size: 14px; margin-bottom: 14px; }
+  footer ul li { margin-bottom: 8px; font-size: 13px; }
+  footer ul li a:hover { color: var(--red); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 20px 0; font-size: 12px; color: #6c757d; }
+
+  /* ===== MODAL ===== */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.open { display: flex; }
+  .modal-box { background: #fff; border-radius: var(--radius); max-width: 440px; width: 100%; padding: 30px; position: relative; max-height: 90vh; overflow-y: auto; }
+  .modal-close { position: absolute; top: 16px; right: 18px; background: none; border: 0; font-size: 22px; cursor: pointer; color: var(--muted); }
+  .modal-box h3 { font-size: 18px; margin-bottom: 4px; }
+  .modal-box .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .modal-box label { font-family: var(--disp); font-size: 12px; font-weight: 600; margin-bottom: 4px; display: block; }
+  .modal-box input { width: 100%; background: #f8f9fa; border: 1px solid var(--line-strong); border-radius: 6px; padding: 10px 12px; font-family: var(--body); font-size: 13.5px; margin-bottom: 12px; }
+  .modal-box input:focus { outline: none; border-color: var(--red); background: #fff; }
+  .modal-box .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .modal-note { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .modal-success { display: none; text-align: center; padding: 10px 0; }
+  .modal-success.show { display: block; }
+  .modal-success .icon-circle { margin: 0 auto 14px; }
+  .modal-form.hide { display: none; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 992px) {
+    nav.nav-links { display: none; }
+    .burger { display: flex; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo { order: -1; }
+    .hero-photo img { max-height: 320px; }
+    .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .cat-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .overview-grid { grid-template-columns: 1fr; }
+    .services-grid, .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .downloads-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    section { padding: 56px 0; }
+  }
+
+  @media (max-width: 576px) {
+    .highlights-grid { grid-template-columns: 1fr; }
+    .cat-cards-grid { grid-template-columns: 1fr; }
+    .services-grid, .values-grid, .why-grid { grid-template-columns: 1fr; }
+    form.inquiry .row2, .modal-box .row2 { grid-template-columns: 1fr; }
+    .contact-strip .wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SITE HEADER ===== -->
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="DST Enterprises logo">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#about">Industries</a>
+      <a href="#why-us">Why DST</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="mailto:dstentp@gmail.com?subject=Email%20Enquiry%20-%20DST%20Enterprises" class="btn btn-outline btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+        Email Enquiry
+      </a>
+      <a href="https://wa.me/919052960970?text=Hello%20DST%20Enterprises%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener" class="btn btn-red btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        WhatsApp
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAVIGATION PANEL -->
+<div class="mobile-panel" id="mobilePanel">
+  <button class="close-x" id="closeMobile" aria-label="Close menu">&times;</button>
+  <a href="#top">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#products">Products</a>
+  <a href="#about">Industries</a>
+  <a href="#why-us">Why DST</a>
+  <a href="#contact">Contact Us</a>
+  <a href="tel:+919052960970" style="color:var(--red); font-size:18px;">+91 90529 60970</a>
+</div>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Fire &amp; Safety · Hardware · Mechanical · Electrical</p>
+      <h1>Your Trusted Partner for <span>Industrial Safety Solutions</span></h1>
+      <p class="hero-sub">Delivering quality Fire &amp; Safety, Industrial, Mechanical, Electrical and General Engineering products with reliability and care. Visakhapatnam-based supplier for all operational support needs.</p>
+      <div class="hero-actions">
+        <button class="btn btn-red doc-trigger" data-doc="profile" data-name="DST Enterprises — Company Profile 2026">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+          Download Company Profile
+        </button>
+        <button class="btn btn-outline doc-trigger" data-doc="brochure" data-name="DST Enterprises — Product Brochure">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8m8 4H8m2-8H8"/></svg>
+          Download Product Brochure
+        </button>
+      </div>
+      <div class="hero-tags">
+        <span>Fire &amp; Safety</span>
+        <span>Hardware</span>
+        <span>Mechanical</span>
+        <span>Electrical</span>
+        <span>Engineering Supplies</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/safety_officer.jpg" alt="DST Enterprises Industrial Safety Equipment Showcase" loading="lazy">
+      <div class="badge">
+        <strong>2026</strong>
+        <span>Trusted industrial supply partner, Visakhapatnam</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HIGHLIGHTS STRIP ===== -->
+<div class="highlights-strip">
+  <div class="wrap highlights-grid">
+    <div class="hl-item">
+      <div class="hl-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg>
+      </div>
+      <div class="hl-text">
+        <h4>Quality Products</h4>
+        <p>Trusted &amp; Certified Standards</p>
+      </div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="hl-text">
+        <h4>On-time Delivery</h4>
+        <p>Reliable &amp; Efficient Logistics</p>
+      </div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="hl-text">
+        <h4>Expert Support</h4>
+        <p>Always Here to Assist You</p>
+      </div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </div>
+      <div class="hl-text">
+        <h4>Customer Focused</h4>
+        <p>Your Success is Our Goal</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== QUICK CONTACT STRIP ===== -->
+<div class="contact-strip">
+  <div class="wrap">
+    <div class="item"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>+91 90529 60970</div>
+    <div class="item"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></span>dstentp@gmail.com</div>
+    <div class="item"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Visakhapatnam, Andhra Pradesh</div>
+  </div>
+</div>
+
+<!-- ===== PRODUCTS CATALOG & SHOWCASE ===== -->
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">OUR PRODUCT RANGE</p>
+      <h2>Complete Industrial &amp; Safety Solutions</h2>
+      <span class="heading-rule center"></span>
+      <p class="lead" style="margin: 0 auto;">Seven core categories supplied directly to keep your facility safe, compliant, and operational.</p>
+    </div>
+
+    <!-- VISUAL CATEGORY CARDS -->
+    <div class="cat-cards-grid">
+      <div class="cat-card">
+        <div class="cat-card-img"><img src="assets/safety_officer.jpg" alt="Fire Extinguishers" loading="lazy"></div>
+        <h3>Fire Extinguishers</h3>
+        <p>ABC Powder, CO₂, Foam, Water and specialized fire suppression solutions.</p>
+        <a href="#cat-01" class="btn btn-outline btn-sm" style="color:var(--red); border-color:transparent;">View Products &rarr;</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-img"><img src="assets/safety_officer.jpg" alt="Fire & Safety Equipment" loading="lazy"></div>
+        <h3>Fire &amp; Safety Equipment</h3>
+        <p>Detectors, manual call points, alarm sounders, landing valves, and hydrants.</p>
+        <a href="#cat-01" class="btn btn-outline btn-sm" style="color:var(--red); border-color:transparent;">View Products &rarr;</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-img"><img src="assets/safety_officer.jpg" alt="PPE & Industrial Safety" loading="lazy"></div>
+        <h3>PPE &amp; Industrial Safety</h3>
+        <p>Head, eye, hand, foot, and fall protection along with gas detection units.</p>
+        <a href="#cat-02" class="btn btn-outline btn-sm" style="color:var(--red); border-color:transparent;">View Products &rarr;</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-img"><img src="assets/safety_officer.jpg" alt="Industrial Hardware" loading="lazy"></div>
+        <h3>Industrial Hardware</h3>
+        <p>Fasteners, fixings, hand tools, power tools, abrasives, and sealants.</p>
+        <a href="#cat-03" class="btn btn-outline btn-sm" style="color:var(--red); border-color:transparent;">View Products &rarr;</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-img"><img src="assets/safety_officer.jpg" alt="Mechanical & Pneumatics" loading="lazy"></div>
+        <h3>Mechanical &amp; Pneumatics</h3>
+        <p>Bearings, valves, pipes, fittings, hydraulics, and welding supplies.</p>
+        <a href="#cat-04" class="btn btn-outline btn-sm" style="color:var(--red); border-color:transparent;">View Products &rarr;</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-img"><img src="assets/safety_officer.jpg" alt="Industrial Supply Solutions" loading="lazy"></div>
+        <h3>Industrial Supply Solutions</h3>
+        <p>Lifting equipment, ladders, electrical items, and custom consumables.</p>
+        <a href="#cat-05" class="btn btn-outline btn-sm" style="color:var(--red); border-color:transparent;">View Products &rarr;</a>
+      </div>
+    </div>
+
+    <!-- DETAILED ACCORDION CATALOG -->
+    <div class="catalog">
+
+      <details class="cat-item" id="cat-01" open>
+        <summary>
+          <span class="cat-num">01</span>
+          <span class="cat-title"><h3>Fire Detection &amp; Fire Fighting</h3><span>Advanced detection and fire fighting solutions to safeguard lives, assets and critical infrastructure.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Fire Detection Systems</h5><ul>
+              <li>Smoke Detectors</li><li>Heat Detectors</li><li>Manual Call Points</li><li>Alarm Sounders &amp; Beacons</li><li>Control Panels</li><li>Addressable &amp; Conventional Systems</li>
+            </ul></div>
+            <div class="subgroup"><h5>Fire Fighting Systems</h5><ul>
+              <li>Sprinkler Systems</li><li>Wet, Dry, Pre-Action Systems</li><li>Hose Reel Systems</li><li>Fire Pumps</li><li>Foam Systems</li><li>Water Mist Systems</li>
+            </ul></div>
+            <div class="subgroup"><h5>Fire Suppression Systems</h5><ul>
+              <li>FM/200, Novec 1230 Systems</li><li>CO₂ Systems</li><li>Inert Gas Systems</li><li>Clean Agent Systems</li><li>Kitchen Hood Suppression Systems</li>
+            </ul></div>
+            <div class="subgroup"><h5>Fire Extinguishers</h5><ul>
+              <li>ABC Powder Extinguishers</li><li>CO₂ Extinguishers</li><li>Foam Extinguishers</li><li>Water Extinguishers</li><li>Wet Chemical Extinguishers</li><li>Trolleys &amp; Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>Hydrant Systems</h5><ul>
+              <li>Landing Valves</li><li>Hydrant Valves</li><li>Hose Boxes</li><li>Couplings</li><li>Nozzles &amp; Accessories</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="cat-item" id="cat-02">
+        <summary>
+          <span class="cat-num">02</span>
+          <span class="cat-title"><h3>Industrial Safety Solutions</h3><span>Comprehensive safety products for a safe, compliant and productive work environment.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Personal Protective Equipment (PPE)</h5><ul>
+              <li>Head Protection</li><li>Eye &amp; Face Protection</li><li>Respiratory Protection</li><li>Hand Protection</li><li>Foot Protection</li><li>Body Protection</li><li>Hearing Protection</li>
+            </ul></div>
+            <div class="subgroup"><h5>Gas Detection Solutions</h5><ul>
+              <li>Portable Gas Detectors</li><li>Fixed Gas Detectors</li><li>Area Monitors</li><li>Breath Alcohol Analyzers</li>
+            </ul></div>
+            <div class="subgroup"><h5>Lockout &amp; Tagout (LOTO)</h5><ul>
+              <li>Lockout Devices</li><li>Tagout Devices</li><li>HASPs &amp; Padlocks</li><li>Lockout Kits</li><li>Safety Stations</li>
+            </ul></div>
+            <div class="subgroup"><h5>Fall Protection Equipment</h5><ul>
+              <li>Full Body Harness</li><li>Lanyards &amp; Lifelines</li><li>Energy Absorbers</li><li>Anchor Points</li><li>Retractable Fall Arresters</li>
+            </ul></div>
+            <div class="subgroup"><h5>First Aid &amp; Emergency Response</h5><ul>
+              <li>First Aid Kits</li><li>Emergency Response Products</li><li>Stretchers</li><li>Rescue Equipment</li>
+            </ul></div>
+            <div class="subgroup"><h5>Road Safety Products</h5><ul>
+              <li>Traffic Cones &amp; Barriers</li><li>Speed Breakers</li><li>Convex Mirrors</li><li>Delineators &amp; Bollards</li><li>Warning Lights</li>
+            </ul></div>
+            <div class="subgroup"><h5>Spill Control Solutions</h5><ul>
+              <li>Spill Kits</li><li>Containment Solutions</li>
+            </ul></div>
+            <div class="subgroup"><h5>Safety Signages</h5><ul>
+              <li>Mandatory Signs</li><li>Warning Signs</li><li>Fire &amp; Safety Signs</li><li>Glow in Dark Signs</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="cat-item" id="cat-03">
+        <summary>
+          <span class="cat-num">03</span>
+          <span class="cat-title"><h3>Industrial Hardware Solutions</h3><span>High-quality hardware built for strength, durability and performance.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Fasteners &amp; Fixings</h5><ul>
+              <li>Bolts, Nuts &amp; Washers</li><li>CSK, Socket Head Screws</li><li>Anchors, Fasteners &amp; Rivets</li><li>Threaded Rods</li><li>J &amp; U Bolts, Foundation Bolts</li><li>Eye Bolts &amp; Nuts, Nyloc Nuts</li>
+            </ul></div>
+            <div class="subgroup"><h5>Hand Tools</h5><ul>
+              <li>Spanners</li><li>Screwdrivers</li><li>Pliers</li><li>Hammers</li><li>Tool Kits</li>
+            </ul></div>
+            <div class="subgroup"><h5>Power Tools &amp; Accessories</h5><ul>
+              <li>Drilling Machines</li><li>Angle Grinders</li><li>Cut-Off Machines</li><li>Rotary Hammers</li>
+            </ul></div>
+            <div class="subgroup"><h5>Abrasives &amp; Cutting Tools</h5><ul>
+              <li>Grinding Wheels</li><li>Cutting Wheels</li><li>Flap Discs</li><li>Drill Bits</li><li>Hole Saws</li>
+            </ul></div>
+            <div class="subgroup"><h5>Adhesives &amp; Sealants</h5><ul>
+              <li>Industrial Adhesives</li><li>Sealants</li><li>Bonding Solutions</li>
+            </ul></div>
+            <div class="subgroup"><h5>Storage &amp; Workplace Solutions</h5><ul>
+              <li>Storage Systems</li><li>Bins &amp; Cabinets</li><li>Workplace Organization Solutions</li>
+            </ul></div>
+            <div class="subgroup"><h5>Workshop Supplies</h5><ul>
+              <li>Measuring Tools</li><li>Tools Storage</li><li>Industrial Hardware Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>General Engineering Supplies</h5><ul>
+              <li>Wide Range of Engineering Supplies</li><li>Maintenance &amp; Operational Requirements</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="cat-item" id="cat-04">
+        <summary>
+          <span class="cat-num">04</span>
+          <span class="cat-title"><h3>Mechanical &amp; Pneumatic Solutions</h3><span>Reliable mechanical, hydraulic and pneumatic products engineered for efficiency and performance.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Bearings &amp; Power Transmission</h5><ul>
+              <li>Ball Bearings</li><li>Roller Bearings</li><li>Plain Bearings</li><li>Needle Bearings</li><li>Couplings, Belts, Chains &amp; Pulleys</li>
+            </ul></div>
+            <div class="subgroup"><h5>Industrial Valves</h5><ul>
+              <li>Ball Valves</li><li>Gate Valves</li><li>Globe Valves</li><li>Butterfly Valves</li><li>Check &amp; Process Control Valves</li>
+            </ul></div>
+            <div class="subgroup"><h5>Pipes &amp; Fittings</h5><ul>
+              <li>MS, GI, CI &amp; SS Round, Square &amp; Rectangular — Seamless &amp; ERW Pipes</li><li>Elbows, Tees &amp; Reducers, Unions, Couplings, Nipples</li><li>Flanges &amp; Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>Hydraulic Components</h5><ul>
+              <li>Hydraulic Hoses &amp; Fittings</li><li>Hydraulic Pumps &amp; Adapters</li><li>Hydraulic Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>Pneumatic Components</h5><ul>
+              <li>Cylinders</li><li>Pneumatic Valves &amp; Fittings</li><li>FRL Units</li>
+            </ul></div>
+            <div class="subgroup"><h5>Pumps &amp; Fluid Handling</h5><ul>
+              <li>Centrifugal Pumps</li><li>Diaphragm Pumps</li><li>Fluid Transfer Solutions</li>
+            </ul></div>
+            <div class="subgroup"><h5>Structural &amp; Welding Solutions</h5><ul>
+              <li>MS Beams, Channels, Rods &amp; Angles</li><li>ARC / MMA / TIG Inverter Welding Machines</li><li>Welding Electrodes, Wires &amp; Filler Rods</li><li>Cutting Torch, Nozzles &amp; Flashback Arrestors</li>
+            </ul></div>
+            <div class="subgroup"><h5>Gaskets, Hose &amp; General Supplies</h5><ul>
+              <li>Gaskets, O-Rings &amp; Oil Seals</li><li>Industrial Hoses &amp; Tubing, Hose Assemblies</li><li>General Mechanical Supplies</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="cat-item" id="cat-05">
+        <summary>
+          <span class="cat-num">05</span>
+          <span class="cat-title"><h3>Industrial Electrical Solutions</h3><span>Safe, reliable and innovative electrical solutions for power, control and connectivity.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Cables &amp; Wires</h5><ul>
+              <li>Power Cables</li><li>Control Cables</li><li>HT Cables</li><li>Instrumentation &amp; Specialty Cables</li>
+            </ul></div>
+            <div class="subgroup"><h5>Switchgear &amp; Protection</h5><ul>
+              <li>Industrial MCBs, MCCBs, ACBs, Isolators</li><li>Contactors &amp; Relays</li><li>Heavy-duty Industrial Plugs &amp; Sockets</li>
+            </ul></div>
+            <div class="subgroup"><h5>Control Components</h5><ul>
+              <li>Push Buttons &amp; Stations</li><li>Selectors</li><li>Timers &amp; Control Devices</li>
+            </ul></div>
+            <div class="subgroup"><h5>Electrical Accessories</h5><ul>
+              <li>High-quality Installation Hardware</li><li>Switches &amp; Sockets</li><li>Brass Cable Glands</li><li>Heavy-Duty Copper Lugs</li><li>Junction Boxes &amp; Connectors</li>
+            </ul></div>
+            <div class="subgroup"><h5>Industrial Connectors</h5><ul>
+              <li>Industrial Plugs &amp; Connectors</li><li>Interface Solutions</li>
+            </ul></div>
+            <div class="subgroup"><h5>Lighting Solutions</h5><ul>
+              <li>LED Industrial Lighting</li><li>Flood Lights</li><li>Panel Lights</li><li>Emergency Lighting</li>
+            </ul></div>
+            <div class="subgroup"><h5>Cable Management Systems</h5><ul>
+              <li>Cable Trays</li><li>Cable Ties</li><li>Conduits</li><li>Trunking Systems</li>
+            </ul></div>
+            <div class="subgroup"><h5>General Electrical Supplies</h5><ul>
+              <li>Supporting Installation &amp; Maintenance Requirements</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="cat-item">
+        <summary>
+          <span class="cat-num">06</span>
+          <span class="cat-title"><h3>Industrial Specialty Products &amp; Consumables</h3><span>Specialized products, testing instruments and consumables for efficiency, precision and reliability.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Electrical Testing Instruments</h5><ul>
+              <li>Digital Multimeters</li><li>Clamp Meters</li><li>Lux, Sound &amp; Infrared Thermometers</li><li>Laser Distance Meters</li>
+            </ul></div>
+            <div class="subgroup"><h5>Nylon &amp; Teflon Products</h5><ul>
+              <li>Nylon Sheets, Rods &amp; Bushes</li><li>Teflon Sheets &amp; Rods</li><li>PTFE Components &amp; Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>Rubber Products</h5><ul>
+              <li>Rubber Sheets &amp; Mats</li><li>Rubber Gaskets</li><li>O-Rings</li><li>Industrial Rubber Components</li>
+            </ul></div>
+            <div class="subgroup"><h5>Maintenance Products</h5><ul>
+              <li>Lubricants &amp; Oils</li><li>Greases</li><li>Maintenance Sprays &amp; Rust Removers</li>
+            </ul></div>
+            <div class="subgroup"><h5>Repair Consumables</h5><ul>
+              <li>Industrial Adhesives &amp; Sealants</li><li>Epoxy Compounds</li><li>Thread Lockers</li>
+            </ul></div>
+            <div class="subgroup"><h5>Cleaning &amp; Surface Preparation</h5><ul>
+              <li>Contact Cleaners</li><li>Degreasers</li><li>Hand Cleaners</li><li>Cleaning Chemicals</li>
+            </ul></div>
+            <div class="subgroup"><h5>Operational Support Materials</h5><ul>
+              <li>Cable Ties &amp; Tapes</li><li>Marking Products</li><li>Packaging &amp; Utility Consumables</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="cat-item">
+        <summary>
+          <span class="cat-num">07</span>
+          <span class="cat-title"><h3>Material Handling &amp; Fluid Power Solutions</h3><span>Innovative solutions for material movement, handling and fluid power transmission.</span></span>
+          <span class="cat-toggle"></span>
+        </summary>
+        <div class="cat-body">
+          <div class="subgroup-grid">
+            <div class="subgroup"><h5>Pneumatics &amp; Hydraulics</h5><ul>
+              <li>Pneumatic Fittings &amp; Tubes</li><li>FRL Units</li><li>Hydraulic Hoses, Fittings &amp; Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>Material Handling Equipment</h5><ul>
+              <li>Hand Pallet Trucks</li><li>Platform Trolleys</li><li>Drum Handling Equipment</li><li>Material Handling Accessories</li>
+            </ul></div>
+            <div class="subgroup"><h5>Lifting Solutions</h5><ul>
+              <li>Chain Pulley Blocks</li><li>Lever Hoists</li><li>Web &amp; Wire Rope Slings</li><li>Shackles &amp; Hooks</li>
+            </ul></div>
+            <div class="subgroup"><h5>Access Equipment</h5><ul>
+              <li>FRP Ladders</li><li>Aluminium Ladders</li><li>Platform Ladders</li><li>Scaffolding Systems</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT & INDUSTRIES SECTION ===== -->
+<section id="about" class="surface">
+  <div class="wrap">
+    <div class="overview-grid">
+      
+      <!-- ABOUT CARD -->
+      <div class="overview-card">
+        <p class="eyebrow">ABOUT US</p>
+        <h2>About DST Enterprises</h2>
+        <span class="heading-rule"></span>
+        <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 12px;">DST Enterprises is a trusted name in industrial supply and procurement. We provide a comprehensive range of Fire &amp; Safety, Industrial, Mechanical, Electrical, and General Engineering products to industries across various sectors.</p>
+        <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 20px;">Our commitment to quality, competitive pricing, on-time delivery, and responsive support makes us a reliable partner for your business.</p>
+        <a href="#contact" class="btn btn-outline btn-sm">Know More About Us &rarr;</a>
+      </div>
+
+      <!-- INDUSTRIES WE SERVE CARD -->
+      <div class="overview-card">
+        <p class="eyebrow">SECTORS</p>
+        <h2>Industries We Serve</h2>
+        <span class="heading-rule"></span>
+        <p style="font-size: 13.5px; color: var(--muted);">Providing reliable products and solutions supporting operational continuity across key sectors.</p>
+        
+        <div class="ind-mini-list">
+          <div class="ind-mini-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M2 20h20M5 20V8l7 4V4l7 4v12"/></svg>
+            Manufacturing
+          </div>
+          <div class="ind-mini-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Oil &amp; Gas
+          </div>
+          <div class="ind-mini-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Power &amp; Energy
+          </div>
+          <div class="ind-mini-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/></svg>
+            Pharma &amp; Chemical
+          </div>
+          <div class="ind-mini-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/></svg>
+            Infrastructure
+          </div>
+          <div class="ind-mini-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
+            Warehousing
+          </div>
+        </div>
+      </div>
+
+      <!-- DIRECT CONTACT CARD -->
+      <div class="overview-card accent">
+        <p class="eyebrow" style="color: #ff8a80;">GET IN TOUCH</p>
+        <h2>Let's Work Together</h2>
+        <span class="heading-rule" style="background: var(--red);"></span>
+        <p style="font-size: 13px; margin-bottom: 20px;">Have a requirement? We are here to help. Reach out directly for quick quotes and stock availability.</p>
+        
+        <ul style="font-size: 13px; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+          <li style="display:flex; gap:10px; align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg> dstentp@gmail.com</li>
+          <li style="display:flex; gap:10px; align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 9052 960 970</li>
+          <li style="display:flex; gap:10px; align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Visakhapatnam, AP, India</li>
+        </ul>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="mailto:dstentp@gmail.com" class="btn btn-outline-light btn-sm" style="flex:1;">Email Enquiry</a>
+          <a href="https://wa.me/919052960970" target="_blank" rel="noopener" class="btn btn-red btn-sm" style="flex:1;">WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">INDUSTRIAL SERVICES</p>
+      <h2>Services &amp; Support</h2>
+      <span class="heading-rule center"></span>
+      <p class="lead" style="margin: 0 auto;">Beyond product supply, we provide essential services to help you maintain compliance and equipment reliability.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h4>Installation Services</h4><p>Professional installation support for fire safety systems and industrial equipment.</p></div>
+      <div class="service-card"><div class="icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/><path d="m9 8 2 2 4-4"/></svg></div><h4>Inspection &amp; Testing</h4><p>Periodic inspection and testing to ensure compliance with safety standards and operational readiness.</p></div>
+      <div class="service-card"><div class="icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h4>Annual Maintenance (AMC)</h4><p>Planned maintenance programs to improve reliability, extend equipment life, and reduce downtime.</p></div>
+      <div class="service-card"><div class="icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h4>Refilling Services</h4><p>Refilling and servicing support for fire extinguishers and safety equipment as per industry standards.</p></div>
+      <div class="service-card"><div class="icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h4>Calibration Services</h4><p>Calibration support for gas detection, monitoring and measuring instruments for accuracy and reliability.</p></div>
+      <div class="service-card"><div class="icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11a9 9 0 0 1 18 0M3 11v5a2 2 0 0 0 2 2h1v-7H5a2 2 0 0 0-2 2zM21 11v5a2 2 0 0 1-2 2h-1v-7h1a2 2 0 0 1 2 2zM10 22h4"/></svg></div><h4>Technical Support</h4><p>Product guidance and application support to help customers select the right solution.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section id="why-us" class="surface">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">WHY DST ENTERPRISES</p>
+      <h2>Quality, Service &amp; Dependability</h2>
+      <span class="heading-rule center"></span>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h4>Wide Range</h4><p>Industrial safety, hardware, mechanical, electrical and specialty solutions.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg></div><h4>Quality Assurance</h4><p>Reliable products sourced from trusted, strictly certified manufacturers.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>Responsive Support</h4><p>Quick response and dependable assistance for every customer requirement.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h4>Timely Delivery</h4><p>Committed to meeting project schedules and operational timelines.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41 13 21a2 2 0 0 1-2.83 0l-7.17-7.17a2 2 0 0 1 0-2.83L10.59 3.4A2 2 0 0 1 12 2.83V2h6a2 2 0 0 1 2 2v6a2 2 0 0 1-.41 1.41z"/><circle cx="16.5" cy="7.5" r="1"/></svg></div><h4>Competitive Pricing</h4><p>Cost-effective solutions that maintain high quality and performance.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h4>Customer Focus</h4><p>Building long-term partnerships through trust and dedication.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12l8.73-5.04M12 22.08V12"/></svg></div><h4>Single Source</h4><p>Supporting multiple industrial requirements through one trusted partner.</p></div>
+      <div class="why-card"><div class="icon-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/><path d="m9 12 2 2 4-4"/></svg></div><h4>Safety &amp; Compliance</h4><p>Adhering strictly to industry standards in every solution we deliver.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOWNLOADS SECTION ===== -->
+<section id="downloads">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">DOCUMENTATION</p>
+      <h2>Downloads &amp; Brochures</h2>
+      <span class="heading-rule center"></span>
+      <p class="lead" style="margin: 0 auto;">Share a few details to unlock immediate access to our brochures and profile documents.</p>
+    </div>
+    <div class="downloads-grid">
+      <div class="doc-card">
+        <div class="doc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8m8 4H8m2-8H8"/></svg></div>
+        <h4>Product Brochure</h4>
+        <p>Our full product range — fire &amp; safety, hardware, mechanical, electrical and specialty supplies — in a single PDF.</p>
+        <button class="btn btn-red doc-trigger" data-doc="brochure" data-name="DST Enterprises — Product Brochure">Download Brochure</button>
+      </div>
+      <div class="doc-card">
+        <div class="doc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+        <h4>Company Profile 2026</h4>
+        <p>Who we are, our vision and mission, services, and why industries choose DST Enterprises.</p>
+        <button class="btn btn-red doc-trigger" data-doc="profile" data-name="DST Enterprises — Company Profile 2026">Download Company Profile</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA STRIP ===== -->
+<section class="cta-strip">
+  <div class="wrap">
+    <h2>Supporting industries with reliability, safety, and service.</h2>
+    <p>Send us your requirement — a part number, a spec, or a photo of what you need.</p>
+    <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+      <a href="mailto:dstentp@gmail.com?subject=Product%20Enquiry%20-%20DST%20Enterprises" class="btn btn-outline-light">Email Your Requirement</a>
+      <a href="https://wa.me/919052960970?text=Hello%20DST%20Enterprises%2C%20I%20have%20a%20product%20enquiry." class="btn btn-outline-light" target="_blank" rel="noopener">Message on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM SECTION ===== -->
+<section id="contact" class="surface">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2>Let's talk about what your site needs.</h2>
+      <span class="heading-rule"></span>
+      <p class="lead">Reach out for a quote, a technical query, or to discuss an ongoing AMC. We usually respond within one business day.</p>
+      <ul class="contact-list">
+        <li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:+919052960970">+91 90529 60970</a></li>
+        <li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></span><a href="mailto:dstentp@gmail.com">dstentp@gmail.com</a></li>
+        <li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Visakhapatnam, Andhra Pradesh, India</span></li>
+      </ul>
+    </div>
+    <form class="inquiry" id="inquiryForm">
+      <div class="row2">
+        <div><label for="fname">Name</label><input type="text" id="fname" name="name" required></div>
+        <div><label for="fcompany">Company</label><input type="text" id="fcompany" name="company"></div>
+      </div>
+      <div class="row2">
+        <div><label for="femail">Email</label><input type="email" id="femail" name="email" required></div>
+        <div><label for="fphone">Phone</label><input type="tel" id="fphone" name="phone"></div>
+      </div>
+      <div>
+        <label for="fmsg">What do you need?</label>
+        <textarea id="fmsg" name="message" required placeholder="e.g. Quote for fire extinguisher refilling at our Vizag warehouse"></textarea>
+      </div>
+      <button type="submit" class="btn btn-red">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="DST Enterprises">
+        <p>Fire &amp; Safety | Hardware | Mechanical | Electrical | Engineering and Industrial Supplies.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why DST</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our Commitment</h5>
+        <p style="font-size:12.5px; line-height: 1.6; color:#adb5bd;">Quality Products. Reliable Service. On-time Delivery. Customer Satisfaction.<br><strong style="color:var(--red);">Your Trusted Partner for Industrial Safety Solutions.</strong></p>
+      </div>
+      <div>
+        <h5>Connect With Us</h5>
+        <div style="display:flex; gap:10px; margin-top:8px;">
+          <a href="mailto:dstentp@gmail.com" style="width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></a>
+          <a href="https://wa.me/919052960970" target="_blank" rel="noopener" style="width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          <a href="tel:+919052960970" style="width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DST Enterprises, Visakhapatnam. All Rights Reserved.</span>
+      <span>Designed with <span style="color:var(--red);">&hearts;</span> for Safety &amp; Reliability</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== GATED DOWNLOAD MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+    <div class="modal-form" id="modalForm">
+      <h3 id="modalTitle">Download document</h3>
+      <p class="modal-sub">Tell us a bit about yourself and the download will start right away.</p>
+      <form id="leadForm">
+        <label for="lname">Full Name *</label>
+        <input type="text" id="lname" required>
+        <div class="row2">
+          <div><label for="lcompany">Company *</label><input type="text" id="lcompany" required></div>
+          <div><label for="ldesignation">Designation *</label><input type="text" id="ldesignation" required></div>
+        </div>
+        <label for="lemail">Email *</label>
+        <input type="email" id="lemail" required>
+        <label for="lphone">Contact Number *</label>
+        <input type="tel" id="lphone" required>
+        <button type="submit" class="btn btn-red" style="width:100%; justify-content:center; margin-top:6px;">Unlock Download</button>
+        <p class="modal-note">Your details help our team follow up with the right information. We don't share them with anyone else.</p>
+      </form>
+    </div>
+
+    <div class="modal-success" id="modalSuccess">
+      <div class="icon-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <h3>Thanks — your download has started.</h3>
+      <p class="modal-sub">If it didn't begin automatically, <a href="#" id="manualDownloadLink" style="color:var(--red); font-weight:600;">click here</a>.</p>
+      <button class="btn btn-outline" id="modalDoneBtn" style="width:100%; justify-content:center; margin-top:10px;">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const burger = document.getElementById('burgerBtn');
+  const panel = document.getElementById('mobilePanel');
+  const closeMobile = document.getElementById('closeMobile');
+  burger.addEventListener('click', () => { panel.classList.add('open'); burger.setAttribute('aria-expanded','true'); });
+  closeMobile.addEventListener('click', () => { panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+
+  // Accordion toggle behavior
+  document.querySelectorAll('details.cat-item').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) document.querySelectorAll('details.cat-item').forEach(o => { if (o !== d) o.open = false; });
+    });
+  });
+
+  // Contact form submission -> Mailto
+  document.getElementById('inquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = e.target;
+    const subject = encodeURIComponent('Website Inquiry — ' + (f.company.value || f.name.value));
+    const body = encodeURIComponent(
+      'Name: ' + f.name.value + '\n' + 'Company: ' + f.company.value + '\n' +
+      'Email: ' + f.email.value + '\n' + 'Phone: ' + f.phone.value + '\n\n' + 'Message:\n' + f.message.value
+    );
+    window.location.href = 'mailto:dstentp@gmail.com?subject=' + subject + '&body=' + body;
+  });
+
+  // Gated Downloads Modal logic
+  const docFiles = {
+    brochure: 'assets/DST-Brochure.pdf',
+    profile: 'assets/DST-Company-Profile.pdf'
+  };
+  let pendingDoc = null;
+
+  const overlay = document.getElementById('modalOverlay');
+  const modalForm = document.getElementById('modalForm');
+  const modalSuccess = document.getElementById('modalSuccess');
+  const modalTitle = document.getElementById('modalTitle');
+  const leadForm = document.getElementById('leadForm');
+  const manualLink = document.getElementById('manualDownloadLink');
+
+  function openModal(docKey, label){
+    pendingDoc = docKey;
+    modalTitle.textContent = 'Download: ' + label;
+    modalForm.classList.remove('hide');
+    modalSuccess.classList.remove('show');
+    overlay.classList.add('open');
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    leadForm.reset();
+  }
+
+  document.querySelectorAll('.doc-trigger').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.doc, btn.dataset.name));
+  });
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalDoneBtn').addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+
+  leadForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('lname').value.trim();
+    const company = document.getElementById('lcompany').value.trim();
+    const designation = document.getElementById('ldesignation').value.trim();
+    const email = document.getElementById('lemail').value.trim();
+    const phone = document.getElementById('lphone').value.trim();
+    const fileUrl = docFiles[pendingDoc];
+
+    try {
+      const leads = JSON.parse(localStorage.getItem('dst_leads') || '[]');
+      leads.push({name, company, designation, email, phone, doc: pendingDoc, date: new Date().toISOString()});
+      localStorage.setItem('dst_leads', JSON.stringify(leads));
+    } catch(err){}
+
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = '';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    manualLink.href = fileUrl;
+
+    modalForm.classList.add('hide');
+    modalSuccess.classList.add('show');
+
+    setTimeout(() => {
+      const subject = encodeURIComponent('Document Download — ' + (pendingDoc === 'brochure' ? 'Product Brochure' : 'Company Profile'));
+      const body = encodeURIComponent(
+        'A visitor downloaded the ' + (pendingDoc === 'brochure' ? 'Product Brochure' : 'Company Profile') + '.\n\n' +
+        'Name: ' + name + '\nCompany: ' + company + '\nDesignation: ' + designation + '\nEmail: ' + email + '\nPhone: ' + phone
+      );
+      window.location.href = 'mailto:dstentp@gmail.com?subject=' + subject + '&body=' + body;
+    }, 900);
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
