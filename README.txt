@@ -1,0 +1,1 @@
+Upload the contents of this folder to the root of dstenterprises.github.io. The PDFs are included in downloads/. All product illustrations are local SVG assets and do not depend on external image links.
